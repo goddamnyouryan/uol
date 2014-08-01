@@ -1,0 +1,13 @@
+#chart {
+  @include clearfix;
+
+  #bike, #car {
+    @include float-left;
+    margin-right: 200px;
+  }
+
+  aside {
+    position: relative;
+    left: 50px;
+  }
+}

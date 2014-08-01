@@ -4,4 +4,4 @@ class Uol.Routers.Application extends Backbone.Router
     '': 'home'
 
   home: ->
-    console.log 'home!'
+    new Uol.Views.Chart el: '#chart'
