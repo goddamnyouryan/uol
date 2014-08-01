@@ -14,7 +14,7 @@
 # Per-page layout changes:
 #
 # With no layout
-page '/source/index.html', :layout => false
+# page '/source/index.html', :layout => false
 #
 # With alternative layout
 # page "/path/to/file.html", :layout => :otherlayout
