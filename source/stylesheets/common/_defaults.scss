@@ -3,8 +3,8 @@ h2, p {
 }
 
 h2 {
+  @include script(64px);
   margin: 100px auto 80px;
-  font-size: 64px;
 
   span {
     height: 4px;
@@ -19,6 +19,7 @@ section {
   padding: 100px 0;
 
   p {
+    @include sans(20px);
     margin: 0 auto 50px;
     width: 880px;
     font-size: 20px;

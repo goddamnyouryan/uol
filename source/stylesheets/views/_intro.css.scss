@@ -1,11 +1,12 @@
 #intro {
-  background: url('../images/title.jpg') no-repeat;
+  background: image-url('title.jpg') no-repeat;
   position: relative;
   background-size: cover;
   height: 978px;
 
   h1 {
     $height: 140px;
+    @include serif($height);
     text-align: center;
     position: absolute;
     margin: auto;

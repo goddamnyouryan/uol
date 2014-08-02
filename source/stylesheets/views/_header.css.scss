@@ -1,12 +1,12 @@
 header {
   @include single-transition(background, 0.2s, ease-in-out);
   position: fixed;
-  background: url('../images/ad.jpg') no-repeat $header;
+  background: image-url('ad.jpg') no-repeat $header;
   width: 100%;
   height: 313px;
 
   &.fixed {
-    background: url('../images/ad-cut.jpg') no-repeat $header;
+    background: image-url('ad-cut.jpg') no-repeat $header;
     height: 100px;
     z-index: 2;
   }
