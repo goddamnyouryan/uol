@@ -4,7 +4,6 @@
 //= require vendor/modernizr
 //= require vendor/underscore
 //= require vendor/backbone
-//= require vendor/highcharts
 //= require vendor/skrollr
 //= require vendor/twentytwenty
 //= require uol

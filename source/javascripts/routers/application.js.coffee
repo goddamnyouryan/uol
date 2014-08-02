@@ -4,6 +4,5 @@ class Uol.Routers.Application extends Backbone.Router
     '': 'home'
 
   home: ->
-    new Uol.Views.Chart el: '#chart'
     new Uol.Views.Parallax el: 'body'
     new Uol.Views.Slider el: '#slider'
