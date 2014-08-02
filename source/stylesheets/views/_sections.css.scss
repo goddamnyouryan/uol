@@ -1,4 +1,24 @@
-#2 {
-  background: $text;
-  color: $background;
+section#one {
+  background: linear-gradient($one-background, lighten($one-background, 10%));
+  color: $one-text;
+}
+
+section#two {
+  background: $two-background;
+  color: $two-text;
+
+  #number {
+    border-color: $two-text;
+  }
+}
+
+#bikes {
+  @include clearfix;
+  margin: 50px 0;
+
+  img {
+    @include float-left;
+    display: block;
+    width: 25%;
+  }
 }

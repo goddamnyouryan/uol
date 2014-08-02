@@ -2,7 +2,7 @@ class Uol.Views.Parallax extends Backbone.View
 
   initialize: (options) ->
     skrollr.init()
-    @time = 5
+    @time = 1
 
     $(window).scroll =>
       scroll = $(window).scrollTop()

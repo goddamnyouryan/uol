@@ -1,0 +1,14 @@
+blockquote#top {
+  padding: 200px 0;
+}
+
+blockquote#second {
+  @include script(48px);
+  margin-bottom: 80px;
+}
+
+blockquote.right {
+  width: 60%;
+  text-align: right;
+  margin-bottom: 50px;
+}

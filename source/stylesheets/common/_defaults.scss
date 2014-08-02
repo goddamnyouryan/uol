@@ -4,7 +4,6 @@ h2, p, blockquote {
 
 blockquote {
   @include serif(46px);
-  padding: 200px 0;
   margin: 0 auto;
   text-align: center;
 }
@@ -28,13 +27,12 @@ h2 {
     font-weight: bold;
     $side: 70px;
     width: $side; height: $side;
-    border: 5px solid $text;
+    border: 5px solid $one-text;
     margin: 0 auto 70px;
   }
 }
 
 section {
-  background: linear-gradient($background, lighten($background, 10%));
   padding: 100px 0;
 
   p {

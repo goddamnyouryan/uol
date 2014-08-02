@@ -1,6 +1,6 @@
 body {
-  background: $background;
-  color: $text;
+  background: $one-background;
+  color: $one-text;
 
   &.no-scroll {
     height: 100%;
@@ -11,5 +11,5 @@ body {
 #container {
   width: 100%;
   position: relative;
-  background: $background;
+  background: $one-background;
 }
