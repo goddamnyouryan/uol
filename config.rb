@@ -32,6 +32,27 @@
 # Helpers
 ###
 
+class ViewHelper < Middleman::Extension
+  def initialize(app, options_hash={}, &block)
+    super
+  end
+
+  helpers do
+    def section_header(text, number)
+      id = "header-#{number}"
+      <<-eos
+        <h2 data-1000-center="top: -1000px;" data-center="top: 0;" id="#{id}">
+          <div id="number">#{number}</div>
+          <span data-1000-center="width:0%;" data-anchor-target="##{id}" data-center="width: 100%;"></span>
+          #{text}
+        </h2>
+      eos
+    end
+  end
+end
+::Middleman::Extensions.register(:view_helper, ViewHelper)
+activate :view_helper
+
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
