@@ -7,9 +7,16 @@ section#two {
   background: $two-background;
   color: $two-text;
 
-  #number {
-    border-color: $two-text;
-  }
+  #number { border-color: $two-text; }
+}
+
+section#three {
+  background: $three-background;
+  color: $three-text;
+
+  #number { border-color: $three-text; }
+
+  img { width: 100%; }
 }
 
 #bikes {
