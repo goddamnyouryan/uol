@@ -19,6 +19,14 @@ section#three {
   img { width: 100%; }
 }
 
+section#four {
+  background: image-url('section-four.jpg') no-repeat fixed;
+  background-size: cover;
+  color: $four-text;
+
+  #number { border-color: $four-text; }
+}
+
 #bikes {
   @include clearfix;
   margin: 50px 0;

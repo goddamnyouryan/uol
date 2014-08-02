@@ -1,6 +1,7 @@
 body {
   background: $one-background;
   color: $one-text;
+  height: auto !important;
 
   &.no-scroll {
     height: 100%;
