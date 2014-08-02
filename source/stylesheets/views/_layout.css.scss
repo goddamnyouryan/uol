@@ -1,10 +1,15 @@
 body {
   background: $background;
   color: $text;
+
+  &.no-scroll {
+    height: 100%;
+    overflow: hidden;
+  }
 }
 
 #container {
-  top: 313px;
   width: 100%;
-  position: absolute;
+  position: relative;
+  background: $background;
 }

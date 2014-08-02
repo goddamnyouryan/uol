@@ -2,12 +2,25 @@ class Uol.Views.Parallax extends Backbone.View
 
   initialize: (options) ->
     skrollr.init()
+    @time = 5
 
-    $(window).scroll ->
+    $(window).scroll =>
       scroll = $(window).scrollTop()
-      bottom = scroll + $(window).height()
-
-      if scroll >= 213
-        $('header').addClass 'fixed'
+      header = $('header').offset().top
+      container = $('#container').offset().top - 100
+      if scroll >= container
+        $('header').addClass 'small'
       else
-        $('header').removeClass 'fixed'
+        $('header').removeClass 'small'
+      if scroll >= header and @time > 0
+        $('body').addClass 'no-scroll'
+        @interval = setInterval @countdown, 1000
+
+  countdown: =>
+    $('header h3').text "Please hold for #{@time} seconds."
+    @time--
+    if 0 >= @time
+      $('body').removeClass 'no-scroll'
+      $('#container').css 'top', $('header').outerHeight()
+      $('header').addClass 'fixed'
+      clearInterval(@interval)
