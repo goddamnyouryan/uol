@@ -41,7 +41,7 @@ class ViewHelper < Middleman::Extension
     def section_header(text, number)
       id = "header-#{number}"
       <<-eos
-        <h2  id="#{id}">
+        <h2 id="#{id}">
           <div id="number">#{number}</div>
           <span data--25p-bottom="width:0%;" data-anchor-target="##{id}" data--75p-bottom="width: 100%;"></span>
           #{text}

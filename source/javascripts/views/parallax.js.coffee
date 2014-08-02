@@ -1,7 +1,6 @@
 class Uol.Views.Parallax extends Backbone.View
 
   initialize: (options) ->
-    skrollr.init()
     @time = 1
 
     $(window).scroll =>
@@ -23,4 +22,5 @@ class Uol.Views.Parallax extends Backbone.View
       $('body').removeClass 'no-scroll'
       $('#container').css 'top', $('header').outerHeight()
       $('header').addClass 'fixed'
+      skrollr.init()
       clearInterval(@interval)

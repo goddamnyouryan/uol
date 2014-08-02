@@ -11,6 +11,7 @@ blockquote {
 h2 {
   @include script(64px);
   margin: 100px auto 100px;
+  text-align: center;
 
   span {
     @include single-transition(all, 0.2s, ease-in-out);
