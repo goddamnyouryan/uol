@@ -1,17 +1,34 @@
-h2, p {
+h2, p, blockquote {
   width: 880px;
+}
+
+blockquote {
+  @include serif(46px);
+  margin: 200px auto;
+  text-align: center;
 }
 
 h2 {
   @include script(64px);
-  margin: 100px auto 80px;
+  margin: 1000px auto 100px;
+  position: relative;
 
   span {
     height: 4px;
-    background-color: $text;
+    background-color: $cross;
     display: block;
     position: relative;
     top: 40px;
+  }
+
+  #number {
+    @include border-radius(50%);
+    text-align: center;
+    font-weight: bold;
+    $side: 70px;
+    width: $side; height: $side;
+    border: 5px solid $text;
+    margin: 0 auto 70px;
   }
 }
 
