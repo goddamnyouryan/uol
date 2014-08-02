@@ -1,0 +1,17 @@
+#intro {
+  background: url('../images/title.jpg') no-repeat;
+  position: relative;
+  background-size: cover;
+  height: 978px;
+
+  h1 {
+    $height: 140px;
+    text-align: center;
+    position: absolute;
+    margin: auto;
+    height: ($height * 2);
+    width: 75%;
+    font-size: $height;
+    left: 0; right: 0; top: 0; bottom: 0;
+  }
+}

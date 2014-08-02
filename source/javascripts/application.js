@@ -4,6 +4,7 @@
 //= require vendor/underscore
 //= require vendor/backbone
 //= require vendor/highcharts
+//= require vendor/skrollr
 //= require uol
 //= require_tree ./routers
 //= require_tree ./views
