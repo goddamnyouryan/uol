@@ -21,6 +21,7 @@ section#one {
 section#two {
   background: $two-background;
   color: $two-text;
+  height: auto !important;
 
   #number { border-color: $two-text; }
 }
@@ -52,6 +53,12 @@ section#four {
 #bikes {
   @include clearfix;
   margin: 50px 0;
+  position: relative;
+
+  video {
+    @include transition;
+    opacity: 0;
+  }
 
   img {
     @include float-left;
