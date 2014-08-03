@@ -32,6 +32,49 @@ header {
   #newsletter {
     @include sans(14px);
     margin-top: 20px;
+
+    &:hover ul { visibility: visible; opacity: 1; }
+
+    &:after {
+      @include sprite-background(arrow);
+      content: '';
+      display: inline-block;
+      margin: 0 0 0 5px;
+    }
+
+    ul {
+      @include _transition;
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      background: $header-background;
+      padding: 20px 10px 10px;
+    }
+
+    li {
+      margin-bottom: 10px;
+
+      &:last-of-type { margin-bottom: 0; }
+
+      &:before {
+        content: '';
+        display: inline-block !important;
+        position: relative;
+        top: 5px;
+        margin-right: 5px;
+      }
+    }
+
+    #email:before { @include sprite-background(email); }
+    #mobile:before { @include sprite-background(mobile); }
+    #facebook:before { @include sprite-background(facebook-2); }
+    #twitter-header:before { @include sprite-background(twitter-2); }
+
+    input {
+      border: 1px solid $one-background;
+      padding: 5px 10px;
+      float: right;
+    }
   }
 
   h1 {

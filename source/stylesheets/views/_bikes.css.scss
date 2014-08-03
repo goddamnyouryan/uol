@@ -4,7 +4,7 @@
   position: relative;
 
   video {
-    @include transition;
+    @include _transition;
     opacity: 0;
     cursor: pointer;
     height: 0;
