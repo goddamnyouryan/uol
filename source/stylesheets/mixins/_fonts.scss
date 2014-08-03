@@ -1,4 +1,4 @@
-$fonts: 'ctmercuriusstd-mediumitalic', 'mercuryregular', 'minionpro-boldit';
+$fonts: 'ctmercuriusstd-mediumitalic', 'mercuryregular', 'minionpro-boldit', 'freightsans-black-webfont';
 
 @each $font in $fonts {
   @include font-face(
@@ -29,3 +29,4 @@ $fonts: 'ctmercuriusstd-mediumitalic', 'mercuryregular', 'minionpro-boldit';
 @mixin script($font-size) { @include font-format(nth($fonts, 1), $font-size, true); }
 @mixin sans($font-size) { @include font-format(nth($fonts, 2), $font-size); }
 @mixin serif($font-size) { @include font-format(nth($fonts, 3), $font-size, true); }
+@mixin tab($font-size) { @include font-format(nth($fonts, 4), $font-size, true); }

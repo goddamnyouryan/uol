@@ -32,6 +32,12 @@ footer {
     position: relative;
   }
 
+  span {
+    @include tab(24px);
+    text-transform: uppercase;
+    margin-right: 5px;
+  }
+
   #credits {
     @include sans(16px);
     @include clearfix;

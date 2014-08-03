@@ -10,11 +10,11 @@ header {
   text-align: center;
   box-sizing: border-box;
 
-  #icons, #newsletter, h1, #vivo, #social {
+  #icons, #tab, #newsletter, h1, #vivo, #social {
     display: inline-block;
   }
 
-  #icons, #newsletter {
+  #icons, #tab, #newsletter {
     @include float-left;
   }
 
@@ -24,7 +24,13 @@ header {
 
   #icons {
     @include sprite-background(header-icons);
-    margin: 10px 30px 0 0;
+    margin: 10px 10px 0 0;
+  }
+
+  #tab {
+    @include tab(24px);
+    margin: 16px 30px 0 0;
+    text-transform: uppercase;
   }
 
   #newsletter {
