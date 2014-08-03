@@ -6,6 +6,7 @@
 //= require vendor/backbone
 //= require vendor/skrollr
 //= require vendor/twentytwenty
+//= require vendor/twitter-fetcher
 //= require uol
 //= require_tree ./routers
 //= require_tree ./views

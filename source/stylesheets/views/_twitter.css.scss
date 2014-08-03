@@ -1,0 +1,37 @@
+#twitter {
+  width: 880px;
+  margin: 0 auto;
+
+  li {
+    @include sans(16px);
+    @include inline-block;
+    width: 45%;
+    margin: 0 10% 25px 0;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #ccc;
+    vertical-align: top;
+
+    &:nth-of-type(2n) { margin: 0 0 25px 0; }
+
+    p {
+      @include sans(16px);
+      width: auto;
+    }
+
+    a {
+      text-decoration: none;
+      color: $one-background;
+      font-weight: bold;
+
+      span:first-of-type { display: none; }
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    p.tweet {
+      margin-top: 25px;
+    }
+  }
+}

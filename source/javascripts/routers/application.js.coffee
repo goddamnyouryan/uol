@@ -10,3 +10,4 @@ class Uol.Routers.Application extends Backbone.Router
     new Uol.Views.BikeVideo el: '#bikes'
     new Uol.Views.Header el: 'header'
     new Uol.Views.Audio el: '#audio'
+    new Uol.Views.Twitter el: '#twitter'

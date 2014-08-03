@@ -49,3 +49,18 @@ section#four {
 
   video.fixed { position: fixed; }
 }
+
+section#five {
+  background: $five-background;
+  color: $five-text;
+  position: relative;
+  z-index: 1;
+
+  h3 {
+    @include script(48px);
+    text-align: center;
+    margin: 0 auto 50px;
+    width: 880px;
+    color: $one-background;
+  }
+}
