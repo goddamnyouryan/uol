@@ -11,5 +11,9 @@
   span {
     @include sprite-background(audio);
     cursor: pointer;
+
+    &.mute {
+      background-position: sprite-position($sprites, mute)
+    }
   }
 }
