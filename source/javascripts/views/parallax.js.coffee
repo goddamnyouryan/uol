@@ -10,6 +10,7 @@ class Uol.Views.Parallax extends Backbone.View
       container = $('#container').offset().top - 100
       if scroll >= header and @time > 0
         $('body').addClass 'no-scroll'
+        $('section#ad h3').show()
         @interval = setInterval @countdown, 1000
       if scroll >= four
         $('section#four video').addClass 'fixed'
@@ -18,9 +19,9 @@ class Uol.Views.Parallax extends Backbone.View
 
   countdown: =>
     @time--
-    $('section#ad h3').text "Please hold for #{@time} seconds."
+    $('section#ad h3').text "00:0#{@time}"
     if 0 >= @time
-      $('section#ad h3').text 'Okay go!'
+      $('section#ad h3').hide()
       $('body').removeClass 'no-scroll'
       $('header').css 'top', 0
       skrollr.init()
