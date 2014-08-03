@@ -7,6 +7,7 @@ class Uol.Views.Parallax extends Backbone.View
       scroll = $(window).scrollTop()
       header = $('section#ad').offset().top
       four = $('section#four').offset().top
+      footer = $('footer').offset().top
       container = $('#container').offset().top - 100
       if scroll >= header and @time > 0
         $('body').addClass 'no-scroll'
@@ -16,6 +17,8 @@ class Uol.Views.Parallax extends Backbone.View
         $('section#four video').addClass 'fixed'
       else
         $('section#four video').removeClass 'fixed'
+      if scroll >= footer
+        $('footer video')[0].play()
 
   countdown: =>
     @time--

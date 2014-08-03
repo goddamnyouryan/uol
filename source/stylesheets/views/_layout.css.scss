@@ -14,3 +14,37 @@ body {
   position: relative;
   background: $one-background;
 }
+
+footer {
+  @include serif(18px);
+  width: 100%;
+  background: $header;
+  position: relative;
+  z-index: 1;
+  padding: 90px 0;
+
+  p {
+    margin: 0 auto 50px;
+    line-height: 32px;
+  }
+
+  video {
+    position: relative;
+  }
+
+  #credits {
+    @include sans(16px);
+    @include clearfix;
+    width: 25%;
+    margin: 25px auto 0;
+
+    h4 {
+      @include float-left;
+      font-weight: bold;
+    }
+
+    ul {
+      @include float-right;
+    }
+  }
+}
