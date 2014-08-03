@@ -80,9 +80,9 @@ set :fonts_dir, 'fonts'
 
 # Build-specific configuration
 configure :build do
-  activate :minify_css
-  activate :minify_html
-  activate :minify_javascript
+  # activate :minify_css
+  # activate :minify_html
+  # activate :minify_javascript
 
   # Enable cache buster
   # activate :asset_hash
