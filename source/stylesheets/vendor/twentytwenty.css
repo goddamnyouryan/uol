@@ -34,16 +34,18 @@
 .twentytwenty-before-label, .twentytwenty-after-label {
   -webkit-transition-property: opacity;
   -moz-transition-property: opacity;
-  transition-property: opacity; }
+  transition-property: opacity;
+}
 
 .twentytwenty-before-label:before, .twentytwenty-after-label:before {
-  color: white;
+  color: #2e2e2e;
   font-size: 13px;
-  letter-spacing: 0.1em; }
+  letter-spacing: 0.1em;
+  background: #fff;
+}
 
 .twentytwenty-before-label:before, .twentytwenty-after-label:before {
   position: absolute;
-  background: rgba(255, 255, 255, 0.2);
   line-height: 38px;
   padding: 0 20px;
   -webkit-border-radius: 2px;
@@ -99,15 +101,11 @@
     -moz-box-sizing: content-box;
     box-sizing: content-box; }
 
-.twentytwenty-before-label {
-  opacity: 0; }
   .twentytwenty-before-label:before {
-    content: "Before"; }
+    content: 'Ciclovias em 2010'; }
 
-.twentytwenty-after-label {
-  opacity: 0; }
   .twentytwenty-after-label:before {
-    content: "After"; }
+    content: 'Ciclovias em 2014'; }
 
 .twentytwenty-horizontal .twentytwenty-before-label:before {
   left: 10px; }
@@ -127,8 +125,6 @@
   transition-property: background;
   background: rgba(0, 0, 0, 0);
   z-index: 25; }
-  .twentytwenty-overlay:hover {
-    background: rgba(0, 0, 0, 0.5); }
     .twentytwenty-overlay:hover .twentytwenty-after-label {
       opacity: 1; }
     .twentytwenty-overlay:hover .twentytwenty-before-label {
