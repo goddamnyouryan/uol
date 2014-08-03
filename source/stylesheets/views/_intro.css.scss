@@ -1,17 +1,25 @@
 #intro {
   padding: 0;
   position: relative;
+  $height: 140px;
 
-  h1 {
-    $height: 140px;
-    @include serif($height);
-    text-align: center;
+  #titles {
+    height: 400px;
     position: absolute;
-    margin: auto;
-    height: ($height * 2);
     width: 75%;
-    font-size: $height;
+    margin: auto;
     left: 0; right: 0; top: 0; bottom: 0;
     z-index: 1;
+  }
+
+  h1 {
+    @include serif($height);
+    text-align: center;
+    font-size: $height;
+  }
+
+  h5 {
+    @include serif(36px);
+    text-align: center;
   }
 }
