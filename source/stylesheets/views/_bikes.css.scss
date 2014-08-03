@@ -1,0 +1,52 @@
+#bikes {
+  @include clearfix;
+  margin: 50px 0;
+  position: relative;
+
+  video {
+    @include transition;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    z-index: 3;
+  }
+
+  span {
+    @include sprite-background(x);
+    position: absolute;
+    z-index: 4;
+    right: 10px; top: 10px;
+    display: none;
+  }
+
+  li {
+    @include float-left;
+    width: 25%;
+    position: relative;
+    cursor: pointer;
+
+    &:hover .hover { opacity: 1; }
+  }
+
+  img {
+    width: 100%;
+    display: block;
+
+  }
+
+  .hover {
+    @include _transition;
+    width: 100%;
+    height: 100%;
+    background: rgba($one-text, 0.5);
+    position: absolute;
+    opacity: 0;
+    top: 0; left: 0;
+    z-index: 2;
+
+    .play {
+      @include sprite-background(play);
+      @include centered(sprite-height(play));
+    }
+  }
+}

@@ -49,31 +49,3 @@ section#four {
 
   video.fixed { position: fixed; }
 }
-
-#bikes {
-  @include clearfix;
-  margin: 50px 0;
-  position: relative;
-
-  video {
-    @include transition;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-  }
-
-  span {
-    @include sprite-background(x);
-    position: absolute;
-    z-index: 2;
-    right: 10px; top: 10px;
-    display: none;
-  }
-
-  img {
-    @include float-left;
-    display: block;
-    cursor: pointer;
-    width: 25%;
-  }
-}

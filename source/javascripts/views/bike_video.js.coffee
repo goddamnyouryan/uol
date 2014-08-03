@@ -1,7 +1,7 @@
 class Uol.Views.BikeVideo extends Backbone.View
 
   events: ->
-    'click img.video': 'playVideo'
+    'click li.video': 'playVideo'
     'click span': 'removeVideo'
 
   playVideo: ->

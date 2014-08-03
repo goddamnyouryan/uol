@@ -27,3 +27,14 @@ $sprites: sprite-map('map/*.png', $spacing: 10px);
     }
   }
 }
+
+@function sprite-height($sprite) {
+  @return image-height(sprite-file($sprites, $sprite));
+}
+
+@mixin centered($height) {
+  top:0; bottom:0; left:0; right: 0;
+  margin: auto;
+  position: absolute;
+  height: $height;
+}
