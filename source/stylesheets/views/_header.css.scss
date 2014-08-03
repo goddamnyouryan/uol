@@ -10,10 +10,6 @@ header {
   text-align: center;
   box-sizing: border-box;
 
-  #icons, #tab, #newsletter, h1, #vivo, #social {
-    display: inline-block;
-  }
-
   #icons, #tab, #newsletter {
     @include float-left;
   }
@@ -40,7 +36,8 @@ header {
 
   h1 {
     @include serif(26px);
-    margin-top: 15px;
+    margin: 15px auto 0;
+    width: 293px;
   }
 
   #vivo {
