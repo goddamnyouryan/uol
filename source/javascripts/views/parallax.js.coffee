@@ -1,7 +1,7 @@
 class Uol.Views.Parallax extends Backbone.View
 
   initialize: (options) ->
-    @time = 1
+    @time = 5
 
     $(window).scroll =>
       scroll = $(window).scrollTop()
@@ -17,10 +17,11 @@ class Uol.Views.Parallax extends Backbone.View
         $('section#four video').removeClass 'fixed'
 
   countdown: =>
-    $('section#ad h3').text "Please hold for #{@time} seconds."
     @time--
+    $('section#ad h3').text "Please hold for #{@time} seconds."
     if 0 >= @time
       $('section#ad h3').text 'Okay go!'
       $('body').removeClass 'no-scroll'
+      $('header').css 'top', 0
       skrollr.init()
       clearInterval(@interval)

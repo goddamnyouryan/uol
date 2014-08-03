@@ -15,7 +15,7 @@ h2 {
   width: 1000px;
 
   span {
-    @include single-transition(all, 0.2s, ease-in-out);
+    @include _transition;
     height: 4px;
     background-color: $cross;
     display: block;
