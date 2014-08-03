@@ -10,6 +10,10 @@ section#ad {
     bottom: 50px; right: 50px;
     display: none;
     z-index: 3;
+
+    @include media($break) {
+      position: relative;
+    }
   }
 }
 
@@ -47,7 +51,11 @@ section#four {
     position: relative;
   }
 
-  video.fixed { position: fixed; }
+  video.fixed {
+    position: fixed;
+
+    @include media($break) { position: relative; }
+  }
 }
 
 section#five {
@@ -62,5 +70,9 @@ section#five {
     margin: 0 auto 50px;
     width: 880px;
     color: $one-background;
+
+    @include media($break) {
+      width: 90%;
+    }
   }
 }

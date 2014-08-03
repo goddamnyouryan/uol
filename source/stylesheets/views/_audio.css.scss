@@ -3,6 +3,11 @@
   bottom: 25px; right: 25px;
   z-index: 99;
 
+  @include media($break) {
+    position: relative;
+    display: none;
+  }
+
   span {
     @include sprite-background(audio);
     cursor: pointer;

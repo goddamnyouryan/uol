@@ -2,6 +2,10 @@
   width: 880px;
   margin: 0 auto;
 
+  @include media($break) {
+    width: 90%;
+  }
+
   li {
     @include sans(16px);
     @include inline-block;
@@ -12,6 +16,13 @@
     vertical-align: top;
 
     &:nth-of-type(2n) { margin: 0 0 25px 0; }
+
+    @include media($break) {
+      @include cancel-float;
+      width: 100%;
+
+      .timePosted { display: none; }
+    }
 
     p {
       @include sans(16px);
@@ -26,8 +37,13 @@
       span:first-of-type { display: none; }
     }
 
-    img {
+    .user img {
       vertical-align: middle;
+      display: inline;
+    }
+
+    img {
+      display: none;
     }
 
     p.tweet {

@@ -1,5 +1,9 @@
 p, blockquote {
   width: 880px;
+
+  @include media($break) {
+    width: 90%;
+  }
 }
 
 blockquote {
@@ -13,6 +17,11 @@ h2 {
   margin: 100px auto 100px;
   text-align: center;
   width: 1000px;
+
+  @include media($break) {
+    @include script(26px);
+    width: 90%;
+  }
 
   span {
     @include _transition;
@@ -43,6 +52,10 @@ section {
     width: 880px;
     font-size: 20px;
     line-height: 36px;
+
+    @include media($break) {
+      width: 90%;
+    }
   }
 
   p:last-of-type {

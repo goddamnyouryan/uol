@@ -189,7 +189,6 @@ var twitterFetcher = function() {
         var op = '';
         if (parseLinks) {
           if (printUser) {
-            console.log(authors[n].innerHTML);
             op += '<div class="user">' + strip(authors[n].innerHTML) + '<span class="timePosted">' + times[n].getAttribute('aria-label') + '</span>' + ' </div>';
           }
           op += '<p class="tweet">' + strip(tweets[n].innerHTML) + '</p>';

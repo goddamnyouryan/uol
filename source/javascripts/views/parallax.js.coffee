@@ -1,27 +1,40 @@
 class Uol.Views.Parallax extends Backbone.View
 
   initialize: (options) ->
+    @mobile = options.mobile
     @time = 5
 
     $(window).scroll =>
-      scroll = $(window).scrollTop()
-      header = $('section#ad').offset().top
-      four = $('section#four').offset().top
-      footer = $('footer').offset().top
-      marco = $('#bikes video').offset().top + $('#bikes video').outerHeight()
-      container = $('#container').offset().top - 100
-      if scroll >= header and @time > 0
-        $('body').addClass 'no-scroll'
-        $('section#ad h3').show()
-        @interval = setInterval @countdown, 1000
-      if scroll >= four
-        $('section#four video').addClass 'fixed'
-      else
-        $('section#four video').removeClass 'fixed'
-      if scroll >= footer
-        $('footer video')[0].play()
-      if scroll >= marco
-        $('#bikes video')[0].pause()
+      @scroll = $(window).scrollTop()
+      @adLock() unless @mobile
+      @sectionFourVideo()
+      @footerAd()
+      @bikesVideo()
+
+  adLock: ->
+    ad = $('section#ad').offset().top
+    console.log @scroll, ad
+    if @scroll >= ad and @time > 0
+      $('body').addClass 'no-scroll'
+      $('section#ad h3').show()
+      @interval = setInterval @countdown, 1000
+
+  sectionFourVideo: ->
+    four = $('section#four').offset().top
+    if @scroll >= four
+      $('section#four video').addClass 'fixed'
+    else
+      $('section#four video').removeClass 'fixed'
+
+  footerAd: ->
+    footer = $('footer').offset().top
+    if @scroll >= footer
+      $('footer video')[0].play()
+
+  bikesVideo: ->
+    marco = $('#bikes video').offset().top + $('#bikes video').outerHeight()
+    if @scroll >= marco
+      $('#bikes video')[0].pause()
 
   countdown: =>
     @time--
