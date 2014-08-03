@@ -1,4 +1,4 @@
-h2, p, blockquote {
+p, blockquote {
   width: 880px;
 }
 
@@ -12,6 +12,7 @@ h2 {
   @include script(64px);
   margin: 100px auto 100px;
   text-align: center;
+  width: 1000px;
 
   span {
     @include single-transition(all, 0.2s, ease-in-out);
@@ -35,18 +36,17 @@ h2 {
 
 section {
   padding: 100px 0;
-  position: relative;
 
-  p {
+  p, ol {
     @include sans(20px);
     margin: 0 auto 50px;
     width: 880px;
     font-size: 20px;
     line-height: 36px;
+  }
 
-    &:last-of-type {
-      margin: 0 auto;
-    }
+  p:last-of-type {
+    margin: 0 auto;
   }
 }
 
@@ -55,4 +55,12 @@ video {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+ol {
+
+  li {
+    margin: 0 0 10px 25px;
+    list-style-type: decimal;
+  }
 }

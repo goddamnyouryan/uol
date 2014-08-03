@@ -1,4 +1,5 @@
 section#ad {
+  position: relative;
 
   h3 {
     @include serif(42px);
