@@ -58,11 +58,14 @@ section#four {
   video {
     @include transition;
     opacity: 0;
+    cursor: pointer;
+    height: 0;
   }
 
   img {
     @include float-left;
     display: block;
+    cursor: pointer;
     width: 25%;
   }
 }

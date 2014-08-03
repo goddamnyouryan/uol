@@ -45,8 +45,10 @@ section#ad
     #bikes
       video width='auto' height='auto'
         source src="http://d3tkzc88hcaqoi.cloudfront.net/testimonial_marco.mp4" type='video/mp4'
-      - 12.times do |i|
-        = image_tag "bikes/bike-#{i + 1}.jpg"
+      - 11.times do |i|
+        = image_tag "bikes/bike-#{i + 1}.jpg", class: 'video'
+
+      = link_to image_tag('bikes/bike-12.jpg'), 'http://shopping.uol.com.br/bicicleta.html#rmcl', target: '_blank'
 
     p Muitas vezes, a bicicleta é mais rápida do que o carro. Num engarrafamento na capital paulista, os automóveis andam de 5 a 8 quilômetros por hora, enquanto a bicicleta chega a 15. "Você também vai respirar menos poluição do que se estiver dentro do carro ou do ônibus", diz o coordenador do Laboratório de Poluição da Faculdade de Medicina da USP, Paulo Saldiva, que percorre 25 quilômetros diários de bicicleta, seu principal meio de transporte há 36 anos. Em São Paulo, onde nos últimos dez anos a população aumentou 12% e a frota de carros cresceu 73%, quem está dentro de um veículo motorizado respira 30% mais poluição que o ciclista ou o pedestre. Isso porque ao ar livre a poluição se dissipa mais rapidamente.
 

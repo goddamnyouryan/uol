@@ -16,6 +16,7 @@
     @include serif($height);
     text-align: center;
     font-size: $height;
+    line-height: $height;
   }
 
   h5 {
