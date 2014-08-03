@@ -10,6 +10,10 @@ header {
   text-align: center;
   box-sizing: border-box;
 
+  @include media($break) {
+    padding: 0 10px;
+  }
+
   #icons, #tab, #newsletter {
     @include float-left;
   }
@@ -27,6 +31,10 @@ header {
     @include tab(24px);
     margin: 16px 30px 0 0;
     text-transform: uppercase;
+
+    @include media($break) {
+      margin: 8px 0 0 0;
+    }
   }
 
   #newsletter {
@@ -81,16 +89,33 @@ header {
     @include serif(26px);
     margin: 15px auto 0;
     width: 293px;
+
+    @include media($break) {
+      font-size: 14px;
+      width: 170px;
+      margin: 7px auto 0;
+    }
   }
 
   #vivo {
     @include sprite-background(vivo);
     padding-right: 25px;
     border-right: 1px solid #e1e1e1;
+
+    @include media($break) {
+      @include sprite-background(vivo-small);
+      padding-right: 0;
+      border-right: none;
+      margin-top: 11px;
+    }
   }
 
   #social {
     @include sprite-background(social);
     margin: 10px 0 0 25px;
+  }
+
+  @include media($break) {
+    #icons, #newsletter, #social { display: none; }
   }
 }
