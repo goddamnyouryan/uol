@@ -22,6 +22,7 @@ section#ad {
 
   @include media($break) {
     min-height: 125px;
+    padding: 50px 0;
 
     video { display: none; }
   }
