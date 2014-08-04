@@ -68,6 +68,9 @@ section#four {
 
     @include media($break) { position: relative; }
   }
+  @include media($break) {
+    video { display: none; }
+  }
 }
 
 section#five {

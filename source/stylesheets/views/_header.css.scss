@@ -40,14 +40,16 @@ header {
   #newsletter {
     @include sans(14px);
     margin-top: 20px;
+    position: relative;
 
     &:hover ul { visibility: visible; opacity: 1; }
 
     &:after {
       @include sprite-background(arrow);
       content: '';
-      display: inline-block;
-      margin: 0 0 0 5px;
+      position: absolute;
+      right: -15px;
+      top: 6px;
     }
 
     ul {

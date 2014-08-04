@@ -13,7 +13,6 @@ class Uol.Views.Parallax extends Backbone.View
 
   adLock: ->
     ad = $('section#ad').offset().top
-    console.log @scroll, ad
     if @scroll >= ad and @time > 0
       $('body').addClass 'no-scroll'
       $('section#ad h3').show()
