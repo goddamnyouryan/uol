@@ -28,7 +28,7 @@ h2 {
     @include script(26px);
     width: 90%;
     margin: 50px auto;
-    text-decoration: line-through;
+    #text { text-decoration: line-through; }
   }
 
   span {
@@ -59,7 +59,6 @@ h2 {
       width: $side;
       height: $side;
       margin: 0 auto $side;
-      text-decoration: none;
     }
   }
 }

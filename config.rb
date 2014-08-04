@@ -44,7 +44,7 @@ class ViewHelper < Middleman::Extension
         <h2 id="#{id}">
           <div id="number">#{number}</div>
           <span data--25p-bottom="width:0%;" data-anchor-target="##{id}" data--75p-bottom="width: 100%;"></span>
-          #{text}
+          <div id='text'>#{text}</div>
         </h2>
       eos
     end
