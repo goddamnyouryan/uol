@@ -13,6 +13,7 @@ class Uol.Views.BikeVideo extends Backbone.View
     @$('video')[0].play()
 
   removeVideo: ->
+    @$('video')[0].pause()
     @$('video').css(opacity: 0, height: 0)
     @$('span').hide()
 

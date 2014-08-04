@@ -52,5 +52,9 @@
       @include sprite-background(play);
       @include centered(sprite-height(play));
     }
+
+    @include media($break) {
+      opacity: 1;
+    }
   }
 }

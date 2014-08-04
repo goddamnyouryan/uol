@@ -46,5 +46,5 @@ class Uol.Views.Parallax extends Backbone.View
       $('body').removeClass 'no-scroll'
       $('header').css 'top', 0
       offset = $('blockquote#top').offset().top - $('header').outerHeight()
-      $('html,body,document').animate({ scrollTop: offset }, { easing: 'swing', duration: 500 }) unless /^((?!chrome).)*safari/i.test(navigator.userAgent)
+      $('html,body,document').animate({ scrollTop: offset }, { easing: 'swing', duration: 500 }) unless /^((?!chrome).)*safari|win/i.test(navigator.userAgent)
       skrollr.init()
