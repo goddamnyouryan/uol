@@ -9,10 +9,6 @@
     cursor: pointer;
     height: 0;
     z-index: 3;
-
-    @include media($break) {
-      display: none !important;
-    }
   }
 
   span {
