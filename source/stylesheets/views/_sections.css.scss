@@ -1,5 +1,7 @@
 section#ad {
   position: relative;
+  background: image-url('ad-background.jpg') no-repeat;
+  background-size: cover;
 
   h3 {
     @include sans(24px);
@@ -13,7 +15,15 @@ section#ad {
 
     @include media($break) {
       position: relative;
+      height: auto;
+
     }
+  }
+
+  @include media($break) {
+    min-height: 100px;
+
+    video { display: none; }
   }
 }
 
@@ -40,6 +50,8 @@ section#three {
 }
 
 section#four {
+  background: image-url('section-four-background.jpg') no-repeat;
+  background-size: cover;
   position: relative;
   color: $four-text;
   height: auto !important;

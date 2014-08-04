@@ -1,5 +1,9 @@
 blockquote#top {
   padding: 200px 0 0;
+
+  @include media($break) {
+    padding: 50px 0 0;
+  }
 }
 
 blockquote#second {
@@ -11,4 +15,8 @@ blockquote.right {
   width: 50%;
   text-align: right;
   margin-bottom: 50px;
+
+  @include media($break) {
+    margin-bottom: 25px;
+  }
 }

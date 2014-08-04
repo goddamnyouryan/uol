@@ -10,17 +10,24 @@ blockquote {
   @include serif(46px);
   margin: 0 auto;
   text-align: center;
+
+  @include media($break) {
+    $size: 30px;
+    font-size: $size;
+    line-height: $size;
+  }
 }
 
 h2 {
   @include script(64px);
-  margin: 100px auto 100px;
+  margin: 100px auto;
   text-align: center;
   width: 1000px;
 
   @include media($break) {
     @include script(26px);
     width: 90%;
+    margin: 50px auto;
   }
 
   span {
@@ -39,12 +46,23 @@ h2 {
     $side: 70px;
     width: $side; height: $side;
     border: 5px solid $one-text;
-    margin: 0 auto 70px;
+    margin: 0 auto $side;
+
+    @include media($break) {
+      $side: 30px;
+      width: $side;
+      height: $side;
+      margin: 0 auto $side;
+    }
   }
 }
 
 section {
   padding: 100px 0;
+
+  @include media($break) {
+    padding: 50px 0;
+  }
 
   p, ol {
     @include sans(20px);
@@ -55,6 +73,9 @@ section {
 
     @include media($break) {
       width: 90%;
+      font-size: 16px;
+      line-height: 20px;
+      margin: 0 auto 25px;
     }
   }
 

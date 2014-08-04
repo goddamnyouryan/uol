@@ -52,5 +52,14 @@ footer {
     ul {
       @include float-right;
     }
+
+    @include media($break) {
+      width: 75%;
+      text-align: center;
+
+      h4, ul { @include cancel-float; }
+
+      h4 { margin-bottom: 15px; }
+    }
   }
 }

@@ -26,6 +26,10 @@
     cursor: pointer;
 
     &:hover .hover { opacity: 1; }
+
+    @include media($break) {
+      width: 100%;
+    }
   }
 
   img {

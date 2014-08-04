@@ -1,12 +1,28 @@
 #intro {
+  background: image-url('intro-background.jpg') no-repeat;
+  background-size: cover;
   padding: 0;
   position: relative;
   $height: 140px;
+  margin-top: 40px;
+
+  @include media($break) {
+    height: auto !important;
+
+    video { display: none; }
+  }
 
   #titles {
     @include centered(400px);
     width: 75%;
     z-index: 1;
+
+    @include media($break) {
+      width: 90%;
+      height: auto;
+      position: relative;
+      padding: 60px 0;
+    }
   }
 
   h1 {
@@ -25,5 +41,11 @@
   h5 {
     @include serif(36px);
     text-align: center;
+
+    @include media($break) {
+      $size: 22px;
+      font-size: $size;
+      line-height: $size;
+    }
   }
 }
