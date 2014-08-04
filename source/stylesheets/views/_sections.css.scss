@@ -2,6 +2,7 @@ section#ad {
   position: relative;
   background: image-url('ad-background.jpg') no-repeat;
   background-size: cover;
+  padding: 0;
 
   h3 {
     @include sans(24px);
