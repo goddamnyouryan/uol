@@ -39,10 +39,10 @@ class Uol.Views.Parallax extends Backbone.View
     @time--
     $('section#ad h3').text "00:0#{@time}"
     if 0 >= @time
+      clearInterval(@interval)
       $('section#ad h3').hide()
       $('body').removeClass 'no-scroll'
       $('header').css 'top', 0
       offset = $('blockquote#top').offset().top - $('header').outerHeight()
-      $('html,body').animate({ scrollTop: offset }, { easing: 'swing', duration: 500 })
+      $('html,body,document').animate({ scrollTop: offset }, { easing: 'swing', duration: 500 }) unless /^((?!chrome).)*safari/i.test(navigator.userAgent)
       skrollr.init()
-      clearInterval(@interval)

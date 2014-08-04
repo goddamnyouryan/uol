@@ -16,12 +16,11 @@ section#ad {
     @include media($break) {
       position: relative;
       height: auto;
-
     }
   }
 
   @include media($break) {
-    min-height: 100px;
+    min-height: 125px;
 
     video { display: none; }
   }

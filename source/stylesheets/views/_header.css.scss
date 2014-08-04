@@ -90,7 +90,7 @@ header {
   h1 {
     @include serif(26px);
     margin: 15px auto 0;
-    width: 293px;
+    width: 300px;
 
     @include media($break) {
       font-size: 14px;
