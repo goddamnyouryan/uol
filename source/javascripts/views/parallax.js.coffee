@@ -3,6 +3,7 @@ class Uol.Views.Parallax extends Backbone.View
   initialize: (options) ->
     @mobile = options.mobile
     @time = 5
+    @pending = true
 
     $(window).scroll =>
       @scroll = $(window).scrollTop()
@@ -27,8 +28,9 @@ class Uol.Views.Parallax extends Backbone.View
 
   footerAd: ->
     footer = $('footer').offset().top
-    if @scroll >= footer
+    if @scroll >= footer and @pending
       $('footer video')[0].play()
+      @pending = false
 
   bikesVideo: ->
     marco = $('#bikes video').offset().top + $('#bikes video').outerHeight()
