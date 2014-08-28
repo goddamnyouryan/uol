@@ -1,0 +1,849 @@
+@import url(vendor/jquery-ui-3dff2c27.css);
+@import url(vendor/twentytwenty-7ed2f657.css);
+/* line 17, /Users/sharpei/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* line 22, /Users/sharpei/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1; }
+
+/* line 24, /Users/sharpei/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 26, /Users/sharpei/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 28, /Users/sharpei/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 30, /Users/sharpei/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 103, /Users/sharpei/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 32, /Users/sharpei/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 116, /Users/sharpei/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+@font-face {
+  font-family: "ctmercuriusstd-mediumitalic";
+  src: url("/fonts/ctmercuriusstd-mediumitalic-fe345150.eot");
+  src: url("/fonts/ctmercuriusstd-mediumitalic-fe345150.eot?#iefix") format('embedded-opentype'), url("/fonts/ctmercuriusstd-mediumitalic-565cb9f7.woff") format('woff'), url("/fonts/ctmercuriusstd-mediumitalic-ac73e731.ttf") format('truetype'), url("/fonts/ctmercuriusstd-mediumitalic-fd41db8b.svg#ctmercuriusstd-mediumitalic") format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "mercuryregular";
+  src: url("/fonts/mercuryregular-79b4d2a4.eot");
+  src: url("/fonts/mercuryregular-79b4d2a4.eot?#iefix") format('embedded-opentype'), url("/fonts/mercuryregular-d08f0fc9.woff") format('woff'), url("/fonts/mercuryregular-deaf0d61.ttf") format('truetype'), url("/fonts/mercuryregular-815a5dd7.svg#mercuryregular") format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "minionpro-boldit";
+  src: url("/fonts/minionpro-boldit-431739e7.eot");
+  src: url("/fonts/minionpro-boldit-431739e7.eot?#iefix") format('embedded-opentype'), url("/fonts/minionpro-boldit-5fae6b27.woff") format('woff'), url("/fonts/minionpro-boldit-64af3791.ttf") format('truetype'), url("/fonts/minionpro-boldit-55652189.svg#minionpro-boldit") format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "freightsans-black-webfont";
+  src: url("/fonts/freightsans-black-webfont-e63b3c03.eot");
+  src: url("/fonts/freightsans-black-webfont-e63b3c03.eot?#iefix") format('embedded-opentype'), url("/fonts/freightsans-black-webfont-171688c7.woff") format('woff'), url("/fonts/freightsans-black-webfont-4886dd65.ttf") format('truetype'), url("/fonts/freightsans-black-webfont-956d1b0b.svg#freightsans-black-webfont") format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+/* line 1, /Users/sharpei/Documents/ruby/uol/source/stylesheets/common/_defaults.scss */
+p, blockquote {
+  width: 880px; }
+  @media all and (max-width: 1024px) {
+    /* line 1, /Users/sharpei/Documents/ruby/uol/source/stylesheets/common/_defaults.scss */
+    p, blockquote {
+      width: 90%; } }
+
+/* line 9, /Users/sharpei/Documents/ruby/uol/source/stylesheets/common/_defaults.scss */
+blockquote {
+  font-family: "minionpro-boldit", "Helvetica", Arial, sans-serif;
+  font-size: 46px;
+  line-height: 59.8px;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  margin: 0 auto;
+  text-align: center; }
+  @media all and (max-width: 1024px) {
+    /* line 9, /Users/sharpei/Documents/ruby/uol/source/stylesheets/common/_defaults.scss */
+    blockquote {
+      font-size: 30px;
+      line-height: 30px; } }
+
+/* line 21, /Users/sharpei/Documents/ruby/uol/source/stylesheets/common/_defaults.scss */
+h2 {
+  font-family: "ctmercuriusstd-mediumitalic", "Helvetica", Arial, sans-serif;
+  font-size: 64px;
+  line-height: 83.2px;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  margin: 100px auto;
+  text-align: center;
+  width: 1000px; }
+  @media all and (max-width: 1024px) {
+    /* line 21, /Users/sharpei/Documents/ruby/uol/source/stylesheets/common/_defaults.scss */
+    h2 {
+      font-family: "ctmercuriusstd-mediumitalic", "Helvetica", Arial, sans-serif;
+      font-size: 26px;
+      line-height: 33.8px;
+      -webkit-font-smoothing: antialiased;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+      width: 90%;
+      margin: 50px auto; }
+      /* line 31, /Users/sharpei/Documents/ruby/uol/source/stylesheets/common/_defaults.scss */
+      h2 #text {
+        text-decoration: line-through; } }
+  /* line 34, /Users/sharpei/Documents/ruby/uol/source/stylesheets/common/_defaults.scss */
+  h2 span {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    height: 4px;
+    background-color: red;
+    display: block;
+    position: relative;
+    top: 40px; }
+    @media all and (max-width: 1024px) {
+      /* line 34, /Users/sharpei/Documents/ruby/uol/source/stylesheets/common/_defaults.scss */
+      h2 span {
+        height: 0;
+        display: none; } }
+  /* line 48, /Users/sharpei/Documents/ruby/uol/source/stylesheets/common/_defaults.scss */
+  h2 #number {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+    width: 70px;
+    height: 70px;
+    border: 5px solid white;
+    margin: 0 auto 70px; }
+    @media all and (max-width: 1024px) {
+      /* line 48, /Users/sharpei/Documents/ruby/uol/source/stylesheets/common/_defaults.scss */
+      h2 #number {
+        width: 30px;
+        height: 30px;
+        margin: 0 auto 30px; } }
+
+/* line 66, /Users/sharpei/Documents/ruby/uol/source/stylesheets/common/_defaults.scss */
+section {
+  padding: 100px 0;
+  min-height: 700px; }
+  @media all and (max-width: 1024px) {
+    /* line 66, /Users/sharpei/Documents/ruby/uol/source/stylesheets/common/_defaults.scss */
+    section {
+      padding: 50px 0;
+      min-height: initial; } }
+  /* line 75, /Users/sharpei/Documents/ruby/uol/source/stylesheets/common/_defaults.scss */
+  section p, section ol {
+    font-family: "mercuryregular", "Helvetica", Arial, sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    margin: 0 auto 50px;
+    width: 880px;
+    font-size: 20px;
+    line-height: 36px; }
+    @media all and (max-width: 1024px) {
+      /* line 75, /Users/sharpei/Documents/ruby/uol/source/stylesheets/common/_defaults.scss */
+      section p, section ol {
+        width: 90%;
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0 auto 25px; } }
+  /* line 90, /Users/sharpei/Documents/ruby/uol/source/stylesheets/common/_defaults.scss */
+  section p:last-of-type {
+    margin: 0 auto; }
+
+/* line 95, /Users/sharpei/Documents/ruby/uol/source/stylesheets/common/_defaults.scss */
+video {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+/* line 104, /Users/sharpei/Documents/ruby/uol/source/stylesheets/common/_defaults.scss */
+ol li {
+  margin: 0 0 10px 25px;
+  list-style-type: decimal; }
+
+/* line 1, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_bikes.css.scss */
+#bikes {
+  overflow: hidden;
+  *zoom: 1;
+  margin: 50px 0;
+  position: relative; }
+  /* line 6, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_bikes.css.scss */
+  #bikes video {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    z-index: 3; }
+  /* line 14, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_bikes.css.scss */
+  #bikes span {
+    height: 34px;
+    width: 34px;
+    background-repeat: no-repeat;
+    background-image: url("/images/map-s7ca1363c52-991c7911.png");
+    background-position: 0 -145px;
+    text-indent: -9999px;
+    display: block;
+    position: absolute;
+    z-index: 4;
+    right: 10px;
+    top: 10px;
+    display: none; }
+  /* line 22, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_bikes.css.scss */
+  #bikes li {
+    display: inline;
+    float: left;
+    width: 25%;
+    position: relative;
+    cursor: pointer; }
+    /* line 28, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_bikes.css.scss */
+    #bikes li:hover .hover {
+      opacity: 1; }
+    @media all and (max-width: 1024px) {
+      /* line 22, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_bikes.css.scss */
+      #bikes li {
+        width: 100%; } }
+  /* line 35, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_bikes.css.scss */
+  #bikes img {
+    width: 100%;
+    display: block; }
+  /* line 41, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_bikes.css.scss */
+  #bikes .hover {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    z-index: 2; }
+    /* line 51, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_bikes.css.scss */
+    #bikes .hover .play {
+      height: 37px;
+      width: 37px;
+      background-repeat: no-repeat;
+      background-image: url("/images/map-s7ca1363c52-991c7911.png");
+      background-position: 0 -98px;
+      text-indent: -9999px;
+      display: block;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      position: absolute;
+      height: 37px; }
+    @media all and (max-width: 1024px) {
+      /* line 41, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_bikes.css.scss */
+      #bikes .hover {
+        opacity: 1; } }
+
+/* line 1, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_blockquotes.css.scss */
+blockquote#top {
+  padding: 200px 0 0; }
+  @media all and (max-width: 1024px) {
+    /* line 1, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_blockquotes.css.scss */
+    blockquote#top {
+      padding: 50px 0 0; } }
+
+/* line 9, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_blockquotes.css.scss */
+blockquote#second {
+  font-family: "ctmercuriusstd-mediumitalic", "Helvetica", Arial, sans-serif;
+  font-size: 48px;
+  line-height: 62.4px;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  margin-bottom: 80px; }
+
+/* line 14, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_blockquotes.css.scss */
+blockquote.right {
+  width: 50%;
+  text-align: right;
+  margin-bottom: 50px; }
+  @media all and (max-width: 1024px) {
+    /* line 14, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_blockquotes.css.scss */
+    blockquote.right {
+      margin-bottom: 25px; } }
+
+/* line 1, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_chart.css.scss */
+#chart {
+  overflow: hidden;
+  *zoom: 1; }
+  /* line 4, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_chart.css.scss */
+  #chart #bike, #chart #car {
+    display: inline;
+    float: left;
+    margin-right: 200px; }
+  /* line 9, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_chart.css.scss */
+  #chart aside {
+    position: relative;
+    left: 50px; }
+
+/* line 1, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_header.css.scss */
+header {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 4;
+  background: #fefefe;
+  color: #2e2e2e;
+  padding: 0 40px;
+  text-align: center;
+  box-sizing: border-box; }
+  @media all and (max-width: 1024px) {
+    /* line 1, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_header.css.scss */
+    header {
+      padding: 0 10px; } }
+  /* line 17, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_header.css.scss */
+  header #icons, header #tab, header #newsletter {
+    display: inline;
+    float: left; }
+  /* line 21, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_header.css.scss */
+  header #vivo, header #social {
+    display: inline;
+    float: right; }
+  /* line 25, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_header.css.scss */
+  header #icons {
+    height: 39px;
+    width: 82px;
+    background-repeat: no-repeat;
+    background-image: url("/images/map-s7ca1363c52-991c7911.png");
+    background-position: 0 -189px;
+    text-indent: -9999px;
+    display: block;
+    margin: 10px 10px 0 0; }
+  /* line 30, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_header.css.scss */
+  header #tab {
+    font-family: "freightsans-black-webfont", "Helvetica", Arial, sans-serif;
+    font-size: 24px;
+    line-height: 31.2px;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    margin: 16px 30px 0 0;
+    text-transform: uppercase; }
+    @media all and (max-width: 1024px) {
+      /* line 30, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_header.css.scss */
+      header #tab {
+        margin: 8px 0 0 0; } }
+  /* line 40, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_header.css.scss */
+  header #newsletter {
+    font-family: "mercuryregular", "Helvetica", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 18.2px;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    margin-top: 20px;
+    position: relative; }
+    /* line 45, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_header.css.scss */
+    header #newsletter:hover ul {
+      visibility: visible;
+      opacity: 1; }
+    /* line 47, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_header.css.scss */
+    header #newsletter:after {
+      height: 8px;
+      width: 10px;
+      background-repeat: no-repeat;
+      background-image: url("/images/map-s7ca1363c52-991c7911.png");
+      background-position: 0 -401px;
+      text-indent: -9999px;
+      display: block;
+      content: '';
+      position: absolute;
+      right: -15px;
+      top: 6px; }
+    /* line 55, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_header.css.scss */
+    header #newsletter ul {
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      background: #fefefe;
+      padding: 20px 10px 10px;
+      width: 185px; }
+    /* line 65, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_header.css.scss */
+    header #newsletter li {
+      margin-bottom: 10px; }
+      /* line 68, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_header.css.scss */
+      header #newsletter li:last-of-type {
+        margin-bottom: 0; }
+      /* line 70, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_header.css.scss */
+      header #newsletter li:before {
+        content: '';
+        display: inline-block !important;
+        position: relative;
+        top: 5px;
+        margin-right: 5px; }
+    /* line 79, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_header.css.scss */
+    header #newsletter #email:before {
+      height: 18px;
+      width: 28px;
+      background-repeat: no-repeat;
+      background-image: url("/images/map-s7ca1363c52-991c7911.png");
+      background-position: 0 -316px;
+      text-indent: -9999px;
+      display: block; }
+    /* line 80, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_header.css.scss */
+    header #newsletter #mobile:before {
+      height: 19px;
+      width: 11px;
+      background-repeat: no-repeat;
+      background-image: url("/images/map-s7ca1363c52-991c7911.png");
+      background-position: 0 -372px;
+      text-indent: -9999px;
+      display: block; }
+    /* line 81, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_header.css.scss */
+    header #newsletter #facebook:before {
+      height: 18px;
+      width: 10px;
+      background-repeat: no-repeat;
+      background-image: url("/images/map-s7ca1363c52-991c7911.png");
+      background-position: 0 -344px;
+      text-indent: -9999px;
+      display: block; }
+    /* line 82, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_header.css.scss */
+    header #newsletter #twitter-header:before {
+      height: 19px;
+      width: 20px;
+      background-repeat: no-repeat;
+      background-image: url("/images/map-s7ca1363c52-991c7911.png");
+      background-position: 0 -287px;
+      text-indent: -9999px;
+      display: block; }
+    /* line 84, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_header.css.scss */
+    header #newsletter input {
+      border: 1px solid #2e2e2e;
+      padding: 5px 10px;
+      float: right; }
+  /* line 91, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_header.css.scss */
+  header h1 {
+    font-family: "minionpro-boldit", "Helvetica", Arial, sans-serif;
+    font-size: 26px;
+    line-height: 33.8px;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    margin: 15px auto 0;
+    width: 300px; }
+    @media all and (max-width: 1024px) {
+      /* line 91, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_header.css.scss */
+      header h1 {
+        font-size: 14px;
+        width: 170px;
+        margin: 7px auto 0; } }
+  /* line 103, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_header.css.scss */
+  header #vivo {
+    height: 57px;
+    width: 136px;
+    background-repeat: no-repeat;
+    background-image: url("/images/map-s7ca1363c52-991c7911.png");
+    background-position: 0 0;
+    text-indent: -9999px;
+    display: block;
+    padding-right: 25px;
+    border-right: 1px solid #e1e1e1; }
+    @media all and (max-width: 1024px) {
+      /* line 103, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_header.css.scss */
+      header #vivo {
+        height: 21px;
+        width: 50px;
+        background-repeat: no-repeat;
+        background-image: url("/images/map-s7ca1363c52-991c7911.png");
+        background-position: 0 -67px;
+        text-indent: -9999px;
+        display: block;
+        padding-right: 0;
+        border-right: none;
+        margin-top: 11px; } }
+  /* line 116, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_header.css.scss */
+  header #social {
+    height: 39px;
+    width: 88px;
+    background-repeat: no-repeat;
+    background-image: url("/images/map-s7ca1363c52-991c7911.png");
+    background-position: 0 -238px;
+    text-indent: -9999px;
+    display: block;
+    margin: 10px 0 0 25px; }
+  @media all and (max-width: 1024px) {
+    /* line 122, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_header.css.scss */
+    header #icons, header #newsletter, header #social {
+      display: none; } }
+
+/* line 1, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_intro.css.scss */
+#intro {
+  background: url("/images/intro-background-225712c8.jpg") no-repeat;
+  background-size: cover;
+  padding: 0;
+  position: relative; }
+  @media all and (max-width: 1024px) {
+    /* line 1, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_intro.css.scss */
+    #intro {
+      height: auto !important;
+      margin-top: 40px; }
+      /* line 12, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_intro.css.scss */
+      #intro video {
+        display: none; } }
+  /* line 15, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_intro.css.scss */
+  #intro #titles {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    height: 400px;
+    width: 75%;
+    z-index: 1; }
+    @media all and (max-width: 1024px) {
+      /* line 15, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_intro.css.scss */
+      #intro #titles {
+        width: 90%;
+        height: auto;
+        position: relative;
+        padding: 60px 0; } }
+  /* line 28, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_intro.css.scss */
+  #intro h1 {
+    font-family: "minionpro-boldit", "Helvetica", Arial, sans-serif;
+    font-size: 140px;
+    line-height: 182px;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    text-align: center;
+    font-size: 140px;
+    line-height: 140px; }
+    @media all and (max-width: 1024px) {
+      /* line 28, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_intro.css.scss */
+      #intro h1 {
+        font-size: 57px;
+        line-height: 57px; } }
+  /* line 41, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_intro.css.scss */
+  #intro h5 {
+    font-family: "minionpro-boldit", "Helvetica", Arial, sans-serif;
+    font-size: 36px;
+    line-height: 46.8px;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    text-align: center; }
+    @media all and (max-width: 1024px) {
+      /* line 41, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_intro.css.scss */
+      #intro h5 {
+        font-size: 22px;
+        line-height: 22px; } }
+
+/* line 1, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_layout.css.scss */
+body {
+  background: #2e2e2e;
+  color: white;
+  height: auto !important; }
+  /* line 6, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_layout.css.scss */
+  body.no-scroll {
+    height: 100%;
+    overflow: hidden; }
+
+/* line 12, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_layout.css.scss */
+#container {
+  width: 100%;
+  position: relative;
+  background: #2e2e2e; }
+
+/* line 18, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_layout.css.scss */
+footer {
+  font-family: "minionpro-boldit", "Helvetica", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 23.4px;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  width: 100%;
+  background: black;
+  position: relative;
+  z-index: 1;
+  padding: 90px 0; }
+  /* line 26, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_layout.css.scss */
+  footer p {
+    margin: 0 auto 50px;
+    line-height: 32px; }
+  /* line 31, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_layout.css.scss */
+  footer video {
+    position: relative; }
+  /* line 35, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_layout.css.scss */
+  footer span {
+    font-family: "freightsans-black-webfont", "Helvetica", Arial, sans-serif;
+    font-size: 24px;
+    line-height: 31.2px;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    text-transform: uppercase;
+    margin-right: 5px; }
+  /* line 41, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_layout.css.scss */
+  footer #credits {
+    font-family: "mercuryregular", "Helvetica", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 20.8px;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    overflow: hidden;
+    *zoom: 1;
+    width: 25%;
+    margin: 25px auto 0; }
+    /* line 47, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_layout.css.scss */
+    footer #credits h4 {
+      display: inline;
+      float: left;
+      font-weight: bold; }
+    /* line 52, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_layout.css.scss */
+    footer #credits ul {
+      display: inline;
+      float: right; }
+    @media all and (max-width: 1024px) {
+      /* line 41, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_layout.css.scss */
+      footer #credits {
+        width: 75%;
+        text-align: center; }
+        /* line 60, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_layout.css.scss */
+        footer #credits h4, footer #credits ul {
+          float: none;
+          display: block; }
+        /* line 62, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_layout.css.scss */
+        footer #credits h4 {
+          margin-bottom: 15px; } }
+
+/* line 1, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_sections.css.scss */
+section#ad {
+  position: relative;
+  background: url("/images/ad-background-ab10800a.jpg") no-repeat;
+  background-size: cover;
+  padding: 0; }
+  /* line 7, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_sections.css.scss */
+  section#ad h3 {
+    font-family: "mercuryregular", "Helvetica", Arial, sans-serif;
+    font-size: 24px;
+    line-height: 31.2px;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    color: #2e2e2e;
+    border: 1px solid #2e2e2e;
+    padding: 5px 15px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    display: none;
+    z-index: 3; }
+    @media all and (max-width: 1024px) {
+      /* line 7, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_sections.css.scss */
+      section#ad h3 {
+        position: relative;
+        height: auto; } }
+  @media all and (max-width: 1024px) {
+    /* line 1, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_sections.css.scss */
+    section#ad {
+      min-height: 125px;
+      padding: 50px 0; }
+      /* line 27, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_sections.css.scss */
+      section#ad video {
+        display: none; } }
+
+/* line 31, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_sections.css.scss */
+section#one {
+  background: linear-gradient(#2e2e2e, #484848);
+  color: white; }
+
+/* line 36, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_sections.css.scss */
+section#two {
+  background: #ececec;
+  color: #2e2e2e;
+  height: auto !important; }
+  /* line 41, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_sections.css.scss */
+  section#two #number {
+    border-color: #2e2e2e; }
+
+/* line 44, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_sections.css.scss */
+section#three {
+  background: #e7dfb6;
+  color: #2e2e2e; }
+  /* line 48, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_sections.css.scss */
+  section#three #number {
+    border-color: #2e2e2e; }
+  /* line 50, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_sections.css.scss */
+  section#three img {
+    width: 100%; }
+
+/* line 53, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_sections.css.scss */
+section#four {
+  background: url("/images/section-four-background-c1adab12.jpg") no-repeat;
+  background-size: cover;
+  position: relative;
+  color: #2e2e2e;
+  height: auto !important; }
+  /* line 60, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_sections.css.scss */
+  section#four #number {
+    border-color: #2e2e2e; }
+  /* line 62, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_sections.css.scss */
+  section#four h2, section#four blockquote, section#four p {
+    z-index: 2;
+    position: relative; }
+  /* line 67, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_sections.css.scss */
+  section#four video.fixed {
+    position: fixed; }
+    @media all and (max-width: 1024px) {
+      /* line 67, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_sections.css.scss */
+      section#four video.fixed {
+        position: relative; } }
+  @media all and (max-width: 1024px) {
+    /* line 73, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_sections.css.scss */
+    section#four video {
+      display: none; } }
+
+/* line 77, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_sections.css.scss */
+section#five {
+  background: #dbe6df;
+  color: #2e2e2e;
+  position: relative;
+  z-index: 1; }
+  /* line 83, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_sections.css.scss */
+  section#five h3 {
+    font-family: "ctmercuriusstd-mediumitalic", "Helvetica", Arial, sans-serif;
+    font-size: 48px;
+    line-height: 62.4px;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    text-align: center;
+    margin: 0 auto 50px;
+    width: 880px;
+    color: #2e2e2e; }
+    @media all and (max-width: 1024px) {
+      /* line 83, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_sections.css.scss */
+      section#five h3 {
+        width: 90%; } }
+
+/* line 1, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_slider.css.scss */
+#slider {
+  margin: 20px 0 50px; }
+  /* line 4, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_slider.css.scss */
+  #slider img {
+    width: 100%; }
+
+/* line 1, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_twitter.css.scss */
+#twitter {
+  width: 880px;
+  margin: 0 auto; }
+  @media all and (max-width: 1024px) {
+    /* line 1, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_twitter.css.scss */
+    #twitter {
+      width: 90%; } }
+  /* line 9, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_twitter.css.scss */
+  #twitter li {
+    font-family: "mercuryregular", "Helvetica", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 20.8px;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+    width: 45%;
+    margin: 0 10% 25px 0;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #ccc;
+    vertical-align: top; }
+    /* line 18, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_twitter.css.scss */
+    #twitter li:nth-of-type(2n) {
+      margin: 0 0 25px 0; }
+    @media all and (max-width: 1024px) {
+      /* line 9, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_twitter.css.scss */
+      #twitter li {
+        float: none;
+        display: block;
+        width: 100%; }
+        /* line 24, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_twitter.css.scss */
+        #twitter li .timePosted {
+          display: none; } }
+    /* line 27, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_twitter.css.scss */
+    #twitter li p {
+      font-family: "mercuryregular", "Helvetica", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 20.8px;
+      -webkit-font-smoothing: antialiased;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+      width: auto; }
+    /* line 32, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_twitter.css.scss */
+    #twitter li a {
+      text-decoration: none;
+      color: #2e2e2e;
+      font-weight: bold; }
+      /* line 37, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_twitter.css.scss */
+      #twitter li a span:first-of-type {
+        display: none; }
+    /* line 40, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_twitter.css.scss */
+    #twitter li .user img {
+      vertical-align: middle;
+      display: inline; }
+    /* line 45, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_twitter.css.scss */
+    #twitter li img {
+      display: none; }
+    /* line 49, /Users/sharpei/Documents/ruby/uol/source/stylesheets/views/_twitter.css.scss */
+    #twitter li p.tweet {
+      margin-top: 25px; }
